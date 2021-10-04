@@ -7,13 +7,21 @@ import ZkTable from 'vue-table-with-tree-grid'
 
 import './assets/css/global.css'
 
+import NProgress from 'nprogress'
+import 'nprogress/nprogress.css'
 
 import axios from 'axios'
 // 请求根路径
 axios.defaults.baseURL = 'https://lianghj.top:8888/api/private/v1'
-// 请求拦截
+// 请求拦截 ,在request拦截器中 展示进度条 Nprogress.start()
 axios.interceptors.request.use(config => {
+  NProgress.start();
   config.headers.Authorization = window.sessionStorage.getItem('token')
+  return config
+})
+axios.interceptors.response.use(config => {
+  // 隐藏进度条
+  NProgress.done();
   return config
 })
 // 全局注册axios

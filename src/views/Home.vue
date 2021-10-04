@@ -138,7 +138,7 @@ export default {
   height: 100%;
   .el-header {
     position: fixed;
-    z-index: 1500;
+    z-index: 5;
     height: 50px !important;
     width: 100%;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08); 
