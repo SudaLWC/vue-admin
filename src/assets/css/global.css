@@ -1,0 +1,72 @@
+/* 全局样式表 */
+html,
+body,
+#app {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  min-width: 1366px;
+  /* overflow-x: hidden; */
+}
+.el-breadcrumb {
+  margin: 2px 0 16px 0;
+  font-size: 12px;
+}
+.el-card {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .15) !important;
+  min-width: 1080px;
+}
+.el-table {
+  margin-top: 20px;
+  font-size: 14px;
+}
+.el-pagination {
+  margin-top: 18px;
+  margin-bottom: -2px;
+}
+.el-cascader-menu {
+  height: 400px;
+}
+.el-radio {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  position: absolute;
+  right: 6px;
+}
+.el-radio__input {
+  visibility: hidden;
+}
+/* 不允许选中样式 */
+/* .is-disabled {
+  cursor: not-allowed;
+} */
+.page-component__content {
+  height: calc(100% - 50px);
+  margin-top: 50px;  
+}
+.el-textarea__inner {
+  font-family: '微软雅黑';
+  height: 40px;
+}
+.cancelBtn {
+  border: none;
+}
+.confirmBtn {
+  color: #409EFF;
+  background-color: #fff;
+  border: none;
+}
+.confirmBtn:hover, .confirmBtn:focus {
+  color: #fff;
+  border-color: #409EFF;
+  background-color: #409EFF;
+}
+.customClass {
+  padding-bottom: 0;
+  width: auto;
+}
+.customClass .el-message-box__header {
+  display: none;
+}
