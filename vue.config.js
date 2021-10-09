@@ -20,7 +20,6 @@ module.exports = {
       config.set('externals',{
         vue: 'Vue',
         'vue-router': 'VueRouter',
-        'vue-table-with-tree-grid': 'ZkTable',
         nprogress: 'NProgress',
         axios: 'axios',
         'vue-quill-editor': 'VueQuillEditor',

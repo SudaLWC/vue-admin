@@ -124,18 +124,20 @@
       width="600px"
       @close="roleSetDialogClosed">
       <!-- 对话框内容 -->
-      <p>当前用户: &nbsp;&nbsp;&nbsp;{{userInfo.username}}</p>
-      <p>当前角色: &nbsp;&nbsp;&nbsp;{{userInfo.role_name}}</p>
-      <p>选择角色：
-        <el-select v-model="roleSetId" placeholder="请选择">
-          <el-option
-            v-for="item in rolesList"
-            :key="item.id"
-            :label="item.roleName"
-            :value="item.id">
-          </el-option>
-        </el-select>
-      </p>
+      <div class="roleSetContent">
+        <p>当前用户: &nbsp;&nbsp;&nbsp;{{userInfo.username}}</p>
+        <p>当前角色: &nbsp;&nbsp;&nbsp;{{userInfo.role_name}}</p>
+        <p>选择角色：
+          <el-select v-model="roleSetId" placeholder="请选择">
+            <el-option
+              v-for="item in rolesList"
+              :key="item.id"
+              :label="item.roleName"
+              :value="item.id">
+            </el-option>
+          </el-select>
+        </p>
+      </div>
       <!-- 底部按钮 -->
       <span slot="footer" class="dialog-footer">
         <el-button @click="roleSetDialogVisible = false">取 消</el-button>
@@ -447,5 +449,8 @@ export default {
 }
 .el-input {
   width: 350px;
+}
+.roleSetContent {
+ margin-left: 78px;
 }
 </style>
