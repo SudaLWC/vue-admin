@@ -5,7 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <title><%= htmlWebpackPlugin.options.isProd ? '' : 'dev-' %>vue-admin</title>
+
+    <!-- 发布模式通过externals引入外部CDN文件 -->
+    <% if(htmlWebpackPlugin.options.isProd){ %>
+    <!-- nprogress 的样式表文件 -->
+    <link rel="stylesheet" href="https://unpkg.com/nprogress@0.2.0/nprogress.css">
+    <!-- 富文本编辑器 的样式表文件 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/quill/1.3.7/quill.core.min.css" />
+    <link rel="stylesheet" href="https://cdn.staticfile.org/quill/1.3.7/quill.snow.min.css" />
+    <link rel="stylesheet" href="https://cdn.staticfile.org/quill/1.3.7/quill.bubble.min.css" />
+    <!-- 引入 element-ui 样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui@2.15.5/lib/theme-chalk/index.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-router@3.2.0/dist/vue-router.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-table-with-tree-grid@0.2.4/lib/vue-table-with-tree-grid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.1/dist/echarts.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <!-- nprogress 的 js 文件 -->
+    <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
+    <!-- 富文本编辑器的 js 文件 -->
+    <script src="https://cdn.staticfile.org/quill/1.3.7/quill.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-quill-editor@3.0.6/dist/vue-quill-editor.js"></script>
+    <!-- 引入 element-ui 组件库 -->
+    <script src="https://unpkg.com/element-ui@2.15.5/lib/index.js"></script>
+    <% } %>
   </head>
   <body>
     <noscript>

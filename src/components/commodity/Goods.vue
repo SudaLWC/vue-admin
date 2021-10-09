@@ -201,9 +201,6 @@ export default {
       }).then(() => {
         this.$router.push('/goods/add')
       }).catch(err => err)   
-      this.$nextTick(() => {
-        console.log(this.$refs.confirm);
-      })  
     },
     // 展示修改商品对话框
     async showEditGoods(id) {

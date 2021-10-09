@@ -83,7 +83,7 @@ export default {
   .login-page {
     display: flex;
     height: 100%;
-    background: url(../assets/images/bgc.jpg);
+    background: url(https://cdn.jsdelivr.net/gh/SudaLWC/picTest@1.0/bgc.jpg);
     background-size: cover;
   }
   .login-box {
