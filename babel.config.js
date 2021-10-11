@@ -16,8 +16,8 @@ module.exports = {
         "libraryName": "element-ui",
         "styleLibraryName": "theme-chalk"
       },
-      // 使用展开运算符配置发布阶段的插件数组
-      ...prodPlugins
-    ]
+    ],
+    // 使用展开运算符配置发布阶段的插件数组
+    ...prodPlugins
   ]
 }
