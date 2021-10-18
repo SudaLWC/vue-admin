@@ -61,11 +61,11 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
 
-### Asied
+### Aside
 
 * element-ui 提供的组件,每个组件名都是它自己的类名
 
-* 布局容器: Container Asied Main
+* 布局容器: Container Aside Main
   * 右侧菜单(二级可折叠) `el-menu`(最外层包裹菜单) `<el-submenu>`一级菜单 `<el-menu-item>` 二级菜单(里层)  `<template>` 菜单的模板(icon/span)
 
 * 请求拦截器:  登录授权 请求验证是否有 token  需要授权的 API ，必须在请求头中使用 `Authorization` 字段提供 `token` 令牌
@@ -74,12 +74,12 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 * 创建完成后立即发送 网络请求 请求左侧菜单栏的数据 get
   * 通过 async 和 await 来获取需要的数据 因为是数组所以可以使用 v-for 来遍历生成数据 第一级的icon不同的解决方法之一:定义一个对象来存放字体图标需要的类名  
   * 菜单栏只打开一个的可以给`el-menu` 添加 `unique-opened` 属性(1) 为 `true` |  折叠属性(2): `collapse` | 关闭过渡动画属性(3): `:collapse-transition="false"` | 
-  * 左侧边栏的宽度变化(Aised): `:width="isCollapse ? '61px' : '200px'"` 利用三元表达式
+  * 左侧边栏的宽度变化(Aside): `:width="isCollapse ? '61px' : '200px'"` 利用三元表达式
   * 子菜单的跳转: `el-from` 有router(index属性)默认为false关闭的  index='/login' index做路由跳转
     * 里面的组件都是作为Home的子组件展示的,如果作为一个独立的路由而不是Home的子路由那么左侧的导航栏就销毁没有了
   * 左侧导航激活的高亮`:default-active="activePath"`: 点击导航-> 使用sessionStorage来保存激活的路径 并赋值给高亮的变量->  当离开再回来created时得到 sessionStorage 的路径 赋值给 高亮变量  (导航守卫.beforeEach)
 
-### Mian
+### Main
 
 #### 用户管理
 
@@ -90,7 +90,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
     * 显示按钮使用作用预插槽: 在`<el-table-column>` 添加template模板再使用`v-slot`属性拿到当前槽作用域的布尔值 Boolean 再通过Switch组件显示 而在 `<el-table-column>` 使用了作用域插槽会覆盖当前层的prop所以可以删除prop 按钮使用时需要 插槽作用域
   * 分页: `pagination`: `page-sizes`	每页显示个数选择器的选项设置 `page-size`	每页显示条目个数，支持 .sync 修饰符	number  `layout`: 显示那些组件 监听改变事件 页码的修改 显示个数的修改 `handleSizeChange(newValue)` 监听显示页数的改变自带参数 是 新的值 `handleCurrentChange`监听页码的改变
   * 按钮状态的修改: 通过Switch的chang改变事件触发回调函数
-  * necktick
+  * $nextTick
   * 搜索功能: 给搜索框双向绑定到 `queryInfo.query` 因为搜索时根据它来的 再搜索按钮绑定点击事件发送用户数据请求,根据query返回对应的参数 , 清空搜索框并清空搜索的内容 element-ui的搜索框有自带的clear事件,点击清楚时再次发送用户数据请求,此时因为query已经清空所以返回的是默认的数据
   * 点击添加用户弹出 `:visible.sync = DialogVisble ` 为true显示反之隐藏
   * 添加 **el-form** 项 :model="绑定要显示数据的对象" :rules="绑定校验规则的对象" ref="重置表单数据素要的方法" 
@@ -252,6 +252,8 @@ module.exports = {
   //   pm2 delete name(id) 删除进程
   //   pm2 ls 查询进程列表
   // https://pm2.keymetrics.io/docs/usage/quick-start/
+  ```
 ```
   
   
+```
