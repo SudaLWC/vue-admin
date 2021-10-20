@@ -18,8 +18,9 @@
         <el-menu unique-opened :collapse="isCollapse" :collapse-transition="false" router
                 :default-active="$route.path" ref="menuRef"> 
           <!-- 折叠按钮 -->
-          <i :class="isCollapse ? 'el-icon-caret-right' : 'el-icon-caret-left'" @click="toggleCollapse"
-              class="collapse"></i>
+          <div class="collapse" @click="toggleCollapse">
+            <i :class="isCollapse ? 'el-icon-caret-right' : 'el-icon-caret-left'"></i>
+          </div>
           <!-- 一级菜单 -->
           <el-submenu :index="item.id + ''" v-for="item in menus" :key="item.id">
             <template slot="title">
@@ -163,15 +164,21 @@ export default {
   }
   .el-aside {
     box-shadow: 0 2px 4px rgba(0, 0, 0, .12);
+    .el-menu--collapse {
+      width: 79px;
+    }
     .el-menu {
       border-right: none;
       .collapse {
+        height: 34px;
+        text-align: center;
+        line-height: 42px;
         color: #909399;
-        margin-top: 18px;
-        display: flex;
-        justify-content: center;
-        padding-left: 15px;
+        // padding-left: 15px;
         cursor: pointer;
+      }
+      .collapse:hover {
+        background-color: #ecf5ff;
       }
       .el-submenu {
         [class^=el-icon-] {
