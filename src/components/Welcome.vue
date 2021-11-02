@@ -6,20 +6,32 @@
       <div class="blackWrap">
         <div class="black" id="black">
           <div class="blackM">
-            <img src="../assets/images/bg2.png" alt="" />
+            <img
+              src="https://cdn.jsdelivr.net/gh/SudaLWC/picTest@2.0/bg2.png"
+              alt=""
+            />
           </div>
           <div class="blackM">
-            <img src="../assets/images/bg2.png" alt="" />
+            <img
+              src="https://cdn.jsdelivr.net/gh/SudaLWC/picTest@2.0/bg2.png"
+              alt=""
+            />
           </div>
         </div>
       </div>
       <div class="whiteWrap">
         <div class="white" id="white">
           <div class="whiteM">
-            <img src="../assets/images/bg1.png" alt="" />
+            <img
+              src="https://cdn.jsdelivr.net/gh/SudaLWC/picTest@2.0/bg1.png"
+              alt=""
+            />
           </div>
           <div class="whiteM">
-            <img src="../assets/images/bg1.png" alt="" />
+            <img
+              src="https://cdn.jsdelivr.net/gh/SudaLWC/picTest@2.0/bg1.png"
+              alt=""
+            />
           </div>
         </div>
       </div>
@@ -207,7 +219,8 @@ h1 {
   bottom: 25px;
   width: 200px;
   height: 100px;
-  background: url(../assets/images/bear.png) no-repeat;
+  background: url(https://cdn.jsdelivr.net/gh/SudaLWC/picTest@2.0/bear.png)
+    no-repeat;
   transform: scale(0.7);
   animation: bear 1s steps(8) infinite, move 5s linear 3s forwards;
 }
