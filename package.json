@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build"
   },
   "dependencies": {
@@ -13,6 +13,7 @@
     "echarts": "^5.2.1",
     "element-ui": "^2.15.5",
     "lodash": "^4.17.21",
+    "mockjs": "^1.1.0",
     "nprogress": "^0.2.0",
     "vue": "^2.6.11",
     "vue-quill-editor": "^3.0.6",

@@ -25,39 +25,39 @@ const routes = [
         component: () => import(/* webpackChunkName: "Login_Home_Welcome" */ '../components/Welcome.vue')
       },
       {
-        path: '/users', 
+        path: '/users',
         component: () => import(/* webpackChunkName: "Users_Rights_Roles" */ '../components/user/Users.vue')
       },
       {
-        path: '/rights', 
+        path: '/rights',
         component: () => import(/* webpackChunkName: "Users_Rights_Roles" */ '../components/authority/Rights.vue')
       },
       {
-        path: '/roles', 
+        path: '/roles',
         component: () => import(/* webpackChunkName: "Users_Rights_Roles" */ '../components/authority/Roles.vue')
       },
       {
-        path: '/categories', 
+        path: '/categories',
         component: () => import(/* webpackChunkName: "Categories_Params" */ '../components/commodity/Categories.vue')
       },
       {
-        path: '/params', 
+        path: '/params',
         component: () => import(/* webpackChunkName: "Categories_Params" */ '../components/commodity/Params.vue')
       },
       {
-        path: '/goods', 
+        path: '/goods',
         component: () => import(/* webpackChunkName: "Goods_Add" */ '../components/commodity/Goods.vue')
       },
       {
-        path: '/goods/add', 
+        path: '/goods/add',
         component: () => import(/* webpackChunkName: "Goods_Add" */ '../components/commodity/Add.vue')
       },
       {
-        path: '/orders', 
+        path: '/orders',
         component: () => import(/* webpackChunkName: "Orders_Report" */ '../components/orders/Orders.vue')
       },
       {
-        path: '/reports', 
+        path: '/reports',
         component: () => import(/* webpackChunkName: "Orders_Report" */ '../components/reports/Reports.vue')
       }
     ]
@@ -73,7 +73,8 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  routes
+  routes,
+  scrollBehavior: () => ({ y: 0 }),
 })
 // 挂载路由导航守卫
 router.beforeEach((to, from, next) => {
