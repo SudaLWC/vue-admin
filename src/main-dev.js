@@ -10,8 +10,8 @@ import './assets/css/global.css'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 
-const { mockXHR } = require('@/mock')
-mockXHR()
+// const { mockXHR } = require('@/mock')
+// mockXHR()
 
 import axios from 'axios'
 // 请求根路径
